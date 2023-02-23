@@ -7,6 +7,7 @@ public class Stack {
     ArrayList<Integer> arrayList;
     int stackSize;
     public Stack(int stackSize){
+        System.out.println("_____STACK_____");
         this.stackSize = stackSize;
 //        this.arrayList = new int[this.stackSize];
         this.arrayList = new ArrayList<>();
@@ -35,5 +36,23 @@ public class Stack {
     public void print(){
         System.out.println("Stack: " + this.arrayList);
 //        this.arrayList.forEach(System.out::println);
+    }
+
+    public static void mainStack(){
+        var stack = new Stack(4);
+        stack.push(5);
+        stack.print();
+        stack.push(4);
+        stack.print();
+        stack.push(8);
+        stack.print();
+        stack.push(11);
+        stack.print();
+        stack.push(4);
+        stack.print();
+        stack.pop();
+        stack.print();
+        stack.pop();
+        stack.print();
     }
 }

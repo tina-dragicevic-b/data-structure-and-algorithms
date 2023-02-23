@@ -9,6 +9,7 @@ public class Queue {
     int SIZE, front, rear;
 
     public Queue(int size){
+        System.out.println("_____QUEUE_____");
         this.SIZE = size;
         this.queue = new ArrayList<>(this.SIZE);
         this.front = this.rear = -1;
@@ -70,5 +71,25 @@ public class Queue {
         }
 //        System.out.println(this.queue);
         System.out.println();
+    }
+    public static void mainQueue(int SIZE){
+        var que = new Queue(SIZE);
+        que.dequeue();
+        que.enqueue(5);
+        que.enqueue(2);
+        que.enqueue(45);
+        que.enqueue(5);
+        que.enqueue(61);
+        que.print();
+        que.enqueue(28);
+        que.dequeue();
+        que.dequeue();
+        que.print();
+        que.enqueue(28);
+        que.print();
+        que.enqueue(57);
+        que.print();
+        que.enqueue(28);
+        que.print();
     }
 }
